@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book Cafe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Book Cafe is a café with a lending library inside. Order a drink, borrow a book, stay as long as you like.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="ribbon">
+  <span>Every drink comes with a free book loan</span>
+  <span class="ribbon__sep" aria-hidden="true">✦</span>
+  <span>Silent Book Club, Sundays at 4PM</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <div class="nav__inner wrap">
+    <a href="#top" class="brand" aria-label="Book Cafe home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="22" height="22"><path d="M5 9.5c3.6-1.3 7.3-1 11 1.4 3.7-2.4 7.4-2.7 11-1.4v13c-3.6-1.3-7.3-1-11 1.4-3.7-2.4-7.4-2.7-11-1.4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 10.9v13" stroke="currentColor" stroke-width="1.6"/><path d="M12 4.5c-.8 1 .8 1.6 0 2.6M16 3.8c-.8 1 .8 1.6 0 2.6M20 4.5c-.8 1 .8 1.6 0 2.6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand__word">Book Cafe<small>Café · Lending Library</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#shelf">Drinks</a>
+      <a href="#arrivals">The Library</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#membership">Library Card</a>
+      <a href="#whats-on">What's On</a>
+      <a href="#donate">Donate</a>
+    </nav>
+    <a class="btn btn--brass nav__cta" href="#reserve">Reserve a Table</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#shelf">Drinks</a>
+    <a href="#arrivals">The Library</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#membership">Library Card</a>
+    <a href="#whats-on">What's On</a>
+    <a href="#donate">Donate</a>
+    <a class="btn btn--brass" href="#reserve">Reserve a Table</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 01 HERO ============ -->
+<section class="hero" id="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="callno">Filed under 028 Reading &nbsp;&amp;&nbsp; 641.3373 Coffee</p>
+      <h1 class="hero__title">
+        <span class="nowrap">Borrow a book.</span> <em>Stay for the coffee.</em>
+      </h1>
+      <p class="hero__lede">
+        Book Cafe is a coffee house with a lending library on its walls. Order anything at the counter,
+        take any book from the shelves, and read it at your table or take it home for three weeks.
+      </p>
+      <div class="hero__actions">
+        <a href="#shelf" class="btn btn--ink">See the Drinks Shelf</a>
+        <a href="#arrivals" class="btn btn--line">Browse the Library</a>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>2,400</dt><dd>Books to borrow</dd></div>
+        <div><dt>1</dt><dd>Free loan per drink</dd></div>
+        <div><dt>3 wks</dt><dd>Per loan, no fines</dd></div>
+      </dl>
+    </div>
+    <figure class="hero__figure">
+      <div class="hero__frame">
+        <img src="images/hero-window-seat.jpg" alt="A window seat with an open book, a cup of coffee and a small plant" width="1400" height="2100">
+      </div>
+      <figcaption class="hero__card">
+        <span class="mono">Now reading at</span>
+        <strong>The Window Seats</strong>
+        <span>Table 4 · <i>Klara and the Sun</i></span>
+      </figcaption>
+      <span class="hero__stamp" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">BORROW · SIP · READ · RETURN · </textPath></text></svg>
+        <b>B</b>
+      </span>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 02 CATALOGUE ============ -->
+<section class="section catalogue" id="catalogue">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow"><span>§ 01</span> The Card Catalogue</p>
+      <h2>Two catalogues, <em>one counter.</em></h2>
+      <p class="sec-head__aside">The top drawers hold the café. The bottom drawers hold the library. Filed by real Dewey numbers, or close enough.</p>
+    </header>
+    <div class="drawers">
+      <a class="drawer" href="#shelf"><span class="drawer__range">641.3373</span><span class="drawer__label">Espresso Bar</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Shots, cortados and milk drinks</span></a>
+      <a class="drawer" href="#shelf"><span class="drawer__range">641.3373 SLO</span><span class="drawer__label">Slow Brew</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Pour-over, one cup at a time</span></a>
+      <a class="drawer" href="#shelf"><span class="drawer__range">641.3372</span><span class="drawer__label">Tea Room</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Loose leaf, by the pot</span></a>
+      <a class="drawer" href="#shelf"><span class="drawer__range">641.815</span><span class="drawer__label">Bakery</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Baked here every morning</span></a>
+      <a class="drawer drawer--book" href="#arrivals"><span class="drawer__range">FIC</span><span class="drawer__label">Fiction</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Novels, A to Z by author</span></a>
+      <a class="drawer drawer--book" href="#arrivals"><span class="drawer__range">811–821</span><span class="drawer__label">Poetry</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Short reads for a short coffee</span></a>
+      <a class="drawer drawer--book" href="#arrivals"><span class="drawer__range">910</span><span class="drawer__label">Travel</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Go somewhere without leaving</span></a>
+      <a class="drawer drawer--book" href="#arrivals"><span class="drawer__range">J</span><span class="drawer__label">Young Readers</span><span class="drawer__pull" aria-hidden="true"></span><span class="drawer__note">Picture books to first chapters</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 STORY ============ -->
+<section class="section story" id="story">
+  <div class="wrap story__grid">
+    <div class="story__images">
+      <img class="story__img story__img--a reveal" src="images/story-hall.jpg" alt="Long wooden tables in a warm, busy café" loading="lazy">
+      <img class="story__img story__img--b reveal" src="images/story-latte-book.jpg" alt="A latte, reading glasses and an open book" loading="lazy">
+      <p class="story__tag mono">Plate I. — The main hall, mid-morning</p>
+    </div>
+    <div class="story__copy">
+      <p class="eyebrow"><span>§ 02</span> Chapter One</p>
+      <h2>We couldn't choose between a café and a library, <em>so we built both.</em></h2>
+      <p class="dropcap">
+        Most cafés want your table back. Most libraries want your coffee outside. We wanted a room where you
+        could have both for as long as you liked, so every wall at Book Cafe is a bookshelf and every shelf is
+        a lending library.
+      </p>
+      <p>
+        The books come from neighbours, publishers and our own collection. You can borrow any of them with any
+        drink, return them whenever you're done, and there are never any late fees.
+      </p>
+      <blockquote class="story__quote">
+        <p>“Every cup comes with a chapter.”</p>
+        <cite>House motto <span>Painted above the counter</span></cite>
+      </blockquote>
+      <a href="#how-it-works" class="link-arrow">See how borrowing works</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 DRINKS SHELF ============ -->
+<section class="section shelf" id="shelf">
+  <div class="wrap">
+    <header class="sec-head sec-head--light">
+      <p class="eyebrow"><span>§ 03</span> The Drinks Shelf</p>
+      <h2>Six house drinks, <em>each with a reading pair.</em></h2>
+      <p class="sec-head__aside">Pick a spine to open it. Each drink comes with a book we think it goes well with, and you can borrow that book at the counter.</p>
+    </header>
+    <div class="shelf__unit">
+      <div class="shelf__books" role="tablist" aria-label="House drinks"></div>
+      <div class="shelf__plank" aria-hidden="true"></div>
+    </div>
+    <article class="volume" id="volume" aria-live="polite"></article>
+  </div>
+</section>
+
+<!-- ============ 05 MEMBERSHIP ============ -->
+<section class="section membership" id="membership">
+  <div class="wrap membership__grid">
+    <div class="membership__intro">
+      <p class="eyebrow"><span>§ 04</span> The Library Card</p>
+      <h2>One card for your coffee <em>and your books.</em></h2>
+      <p class="big-offer"><span>From</span> $0</p>
+      <p>Every card lets you borrow. Paid cards add more loans at once, money off drinks and seats at our events. Cancel any month.</p>
+      <img class="membership__photo" src="images/membership-reader.jpg" alt="Someone reading a book in warm afternoon light" loading="lazy">
+    </div>
+    <div class="cards">
+      <article class="lcard lcard--oat reveal">
+        <header><span class="mono">Card No. 01</span><span class="lcard__price">Free</span></header>
+        <h3>Reader</h3>
+        <p>Borrow 1 book at a time for 3 weeks. Every 10th drink is on us.</p>
+        <a href="#library-card" class="btn btn--ink btn--sm">Get this card</a>
+      </article>
+      <article class="lcard lcard--sage reveal">
+        <header><span class="mono">Card No. 02</span><span class="lcard__price">$15<small>/mo</small></span></header>
+        <h3>Regular</h3>
+        <p>Borrow 3 books at a time, 10% off every drink, and first pick from the new arrivals shelf.</p>
+        <a href="#library-card" class="btn btn--ink btn--sm">Get this card</a>
+      </article>
+      <article class="lcard lcard--rose reveal">
+        <header><span class="mono">Card No. 03</span><span class="lcard__price">$32<small>/mo</small></span></header>
+        <h3>Bookworm</h3>
+        <p>A house coffee every day, 5 books at a time, and one free workshop or event each month.</p>
+        <a href="#library-card" class="btn btn--ink btn--sm">Get this card</a>
+      </article>
+      <article class="lcard lcard--ink reveal">
+        <header><span class="mono">Card No. 04</span><span class="lcard__price">$60<small>/mo</small></span></header>
+        <h3>Book Club</h3>
+        <p>For clubs of up to 8. A reserved table once a month, a carafe of coffee, and up to 8 copies of your pick.</p>
+        <a href="#reserve" class="btn btn--brass btn--sm">Get this card</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 NEW ARRIVALS (library) ============ -->
+<section class="section arrivals" id="arrivals">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow"><span>§ 05</span> Just Shelved</p>
+      <h2>New in the library, <em>ready to borrow.</em></h2>
+      <div class="filters" role="group" aria-label="Filter by section">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="Fiction">Fiction</button>
+        <button class="chip" data-filter="Nonfiction">Nonfiction</button>
+        <button class="chip" data-filter="Poetry">Poetry</button>
+      </div>
+    </header>
+    <div class="index-cards" id="arrivals-grid"></div>
+  </div>
+</section>
+
+<!-- ============ 07 HOW BORROWING WORKS ============ -->
+<section class="section history" id="how-it-works">
+  <div class="wrap history__grid">
+    <div class="history__aside">
+      <p class="eyebrow"><span>§ 06</span> Lending Rules</p>
+      <h2>How borrowing works, <em>in five steps.</em></h2>
+      <p>No sign-up forms or deposits. If you've bought a drink today, you can take a book home.</p>
+      <figure class="history__figure">
+        <img src="images/howto-pick-a-book.jpg" alt="A hand pulls a book from a full shelf" loading="lazy">
+        <figcaption class="mono">Fig. 2 — Step two, in progress</figcaption>
+      </figure>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="timeline__year">Step 1</span><div><h3>Order anything at the counter</h3><p>An espresso, a pot of tea or a slice of cake. Any order counts as your library pass for the day.</p></div></li>
+      <li class="reveal"><span class="timeline__year">Step 2</span><div><h3>Pick a book from any shelf</h3><p>Every book in the building is part of the library, except the ones in the glass case by the door.</p></div></li>
+      <li class="reveal"><span class="timeline__year">Step 3</span><div><h3>Get it stamped</h3><p>Bring it to the counter. We stamp the due date inside the back cover, three weeks from today.</p></div></li>
+      <li class="reveal"><span class="timeline__year">Step 4</span><div><h3>Read here, or take it home</h3><p>Stay at your table as long as you like, or take it with you. Drip refills are free while you read.</p></div></li>
+      <li class="reveal"><span class="timeline__year">Step 5</span><div><h3>Return it, or swap it</h3><p>Drop it in the return slot by the door. Late? No fines. Leave one of your own books and you can keep ours.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 08 HOUSE RULES ============ -->
+<section class="section rules" id="house-rules">
+  <div class="wrap">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow"><span>§ 07</span> Reading Room Etiquette</p>
+      <h2>Three house rules, <em>politely kept.</em></h2>
+    </header>
+    <div class="rules__grid">
+      <article class="rule reveal">
+        <span class="rule__num">I.</span>
+        <img src="images/rule-books.jpg" alt="A row of well-read books on a shelf" loading="lazy">
+        <h3>The Long Room is for quiet.</h3>
+        <p>Talk all you like in the main hall and the Garden Room. Upstairs in the Long Room, it's pages turning and cups set down softly.</p>
+      </article>
+      <article class="rule reveal">
+        <span class="rule__num">II.</span>
+        <img src="images/rule-stack.jpg" alt="A hand holding up a small stack of books" loading="lazy">
+        <h3>Stay as long as the chapter.</h3>
+        <p>No time limits and no laptop curfews. If the place is full, we may ask you to share a table, never to leave.</p>
+      </article>
+      <article class="rule reveal">
+        <span class="rule__num">III.</span>
+        <img src="images/rule-open-book.jpg" alt="An open book with its pages fanned out" loading="lazy">
+        <h3>Leave a note, not a mark.</h3>
+        <p>Please don't write in the margins. Use one of the bookmark cards at the counter to leave a note for the next reader.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 ROOMS ============ -->
+<section class="section branches" id="rooms">
+  <div class="wrap">
+    <header class="sec-head sec-head--light">
+      <p class="eyebrow"><span>§ 08</span> Find Your Seat</p>
+      <h2>Five rooms, <em>five ways to read.</em></h2>
+      <p class="sec-head__aside">From loud and lively to library quiet. "Open now" uses your device's time.</p>
+    </header>
+    <div class="branches__grid">
+      <ul class="branch-list" id="room-list" role="tablist" aria-label="Rooms"></ul>
+      <article class="branch-detail" id="room-detail" aria-live="polite"></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 MARGINALIA ============ -->
+<section class="section marginalia" id="marginalia">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow"><span>§ 09</span> Marginalia</p>
+      <h2>Lines worth <em>underlining.</em></h2>
+      <p class="sec-head__aside">Pencilled on the chalkboard above the bar, one at a time.</p>
+    </header>
+    <div class="notes">
+      <figure class="note reveal">
+        <blockquote>“I have measured out my life with coffee spoons.”</blockquote>
+        <figcaption><strong>T. S. Eliot</strong><span>The Love Song of J. Alfred Prufrock, 1915</span></figcaption>
+      </figure>
+      <figure class="note note--tilt reveal">
+        <blockquote>“I declare after all there is no enjoyment like reading!”</blockquote>
+        <figcaption><strong>Jane Austen</strong><span>Pride and Prejudice, 1813</span></figcaption>
+      </figure>
+      <figure class="note reveal">
+        <blockquote>“I have always imagined that Paradise will be a kind of library.”</blockquote>
+        <figcaption><strong>Jorge Luis Borges</strong><span>Poem of the Gifts</span></figcaption>
+      </figure>
+      <figure class="note note--tilt2 reveal">
+        <blockquote>“You can never get a cup of tea large enough or a book long enough to suit me.”</blockquote>
+        <figcaption><strong>C. S. Lewis</strong><span>As quoted by Walter Hooper</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 RESERVE ============ -->
+<section class="section reserve" id="reserve">
+  <div class="wrap reserve__grid">
+    <div class="reserve__media">
+      <img src="images/reserve-tables.jpg" alt="Café tables among plants and shelves" loading="lazy">
+      <div class="reserve__slip">
+        <span class="mono">Reservation slip</span>
+        <p>Book clubs, study groups, author readings and private parties. Tables for 2 to 40.</p>
+        <span class="reserve__phone">(555) 014-2048</span>
+      </div>
+    </div>
+    <form class="reserve__form" id="reserve-form" novalidate>
+      <p class="eyebrow"><span>§ 10</span> Reserve a Table</p>
+      <h2>Save a seat <em>for your next chapter.</em></h2>
+      <div class="field-row">
+        <label class="field"><span>Name</span><input id="rf-name" name="name" required autocomplete="name"></label>
+        <label class="field"><span>Email</span><input id="rf-email" name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="field-row">
+        <label class="field"><span>Room</span><select id="rf-room" name="room"></select></label>
+        <label class="field"><span>Date</span><input id="rf-date" name="date" type="date" required></label>
+      </div>
+      <div class="field-row">
+        <label class="field"><span>Guests</span><input id="rf-guests" name="guests" type="number" min="1" max="40" value="6"></label>
+        <label class="field"><span>Occasion</span>
+          <select id="rf-type" name="type"><option>Book club</option><option>Study session</option><option>Author reading</option><option>Private party</option></select>
+        </label>
+      </div>
+      <label class="field"><span>Notes</span><textarea id="rf-notes" name="notes" rows="3" placeholder="What are you reading? Anything we should know?"></textarea></label>
+      <button class="btn btn--ink" type="submit">Request this table</button>
+      <p class="form-msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 12 WHAT'S ON ============ -->
+<section class="section reading" id="whats-on">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow"><span>§ 11</span> What's On</p>
+      <h2>Readings, clubs <em>&amp; late nights.</em></h2>
+      <a href="#reserve" class="link-arrow sec-head__aside">Book an event</a>
+    </header>
+    <div class="posts">
+      <article class="post reveal">
+        <div class="post__img"><img src="images/event-silent-book-club.jpg" alt="An open book resting on green grass and autumn leaves" loading="lazy"><span class="post__tag">Every Sunday · Free</span></div>
+        <p class="mono post__meta">Sundays · 4–6PM · Garden Room</p>
+        <h3>Silent Book Club</h3>
+        <p>Bring a book or borrow one of ours. One hour of quiet reading together, then an hour to talk about it. Free with any drink.</p>
+        <a href="#reserve" class="link-arrow">Save a seat</a>
+      </article>
+      <article class="post reveal">
+        <div class="post__img"><img src="images/event-open-mic.jpg" alt="A cup of coffee on a saucer beside scattered beans" loading="lazy"><span class="post__tag">Thu · Nov 19</span></div>
+        <p class="mono post__meta">7PM · The Evening Salon</p>
+        <h3>Poetry &amp; Pour-over</h3>
+        <p>An open mic for poems, short fiction and letters you never sent. Five minutes each. Sign up at the bar from 6:30PM.</p>
+        <a href="#reserve" class="link-arrow">Sign up to read</a>
+      </article>
+      <article class="post reveal">
+        <div class="post__img"><img src="images/event-night-reading.jpg" alt="Someone reading by lamplight at night" loading="lazy"><span class="post__tag">Sat · Dec 5 · $45</span></div>
+        <p class="mono post__meta">10AM · Workshop</p>
+        <h3>Latte Art &amp; Bookbinding</h3>
+        <p>Pour a rosetta in the morning and stitch a pocket notebook by lunch. All materials, two drinks and a pastry included.</p>
+        <a href="#reserve" class="link-arrow">Book a place</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 THE STACKS ============ -->
+<section class="section stacks" id="stacks">
+  <div class="wrap">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow"><span>§ 12</span> The Stacks</p>
+      <h2>Corners worth <em>getting lost in.</em></h2>
+    </header>
+    <div class="gallery">
+      <figure class="g g--tall"><img src="images/g-round-library.jpg" alt="A curved wall of bookshelves under warm light" loading="lazy"><figcaption>The curved stacks</figcaption></figure>
+      <figure class="g"><img src="images/g-book-stack.jpg" alt="Stacked books beside a coffee cup" loading="lazy"><figcaption>Today's returns</figcaption></figure>
+      <figure class="g"><img src="images/g-cafe-sign.jpg" alt="A lit café sign above the bar" loading="lazy"><figcaption>Above the bar</figcaption></figure>
+      <figure class="g g--tall"><img src="images/g-library-book.jpg" alt="An open book in a dim library aisle" loading="lazy"><figcaption>The back aisle</figcaption></figure>
+      <figure class="g g--wide"><img src="images/g-bright-cafe.jpg" alt="A bright, busy café with long tables" loading="lazy"><figcaption>Saturday morning</figcaption></figure>
+      <figure class="g"><img src="images/g-bookcase.jpg" alt="Tall wooden bookcases filled with colorful books" loading="lazy"><figcaption>Fiction, A to F</figcaption></figure>
+      <figure class="g"><img src="images/g-old-books.jpg" alt="Piles of colorful old hardback books" loading="lazy"><figcaption>Donations, unsorted</figcaption></figure>
+      <figure class="g g--wide"><img src="images/g-shelves.jpg" alt="Long rows of bookshelves" loading="lazy"><figcaption>The Long Room</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 LIBRARY CARD SIGNUP ============ -->
+<section class="section signup" id="library-card">
+  <div class="wrap signup__grid">
+    <div>
+      <p class="eyebrow"><span>§ 13</span> Get a Library Card</p>
+      <h2>Your free card, <em>issued in ten seconds.</em></h2>
+      <p>Sign up for a free Reader card and our monthly letter: new books on the shelves, the month's events and the drink of the season. Type your name to see your card.</p>
+      <form class="signup__form" id="signup-form" novalidate>
+        <label class="sr-only" for="su-name">Your name</label>
+        <input id="su-name" name="name" placeholder="Your name" autocomplete="name">
+        <label class="sr-only" for="su-email">Email address</label>
+        <input id="su-email" name="email" type="email" placeholder="Email address" required autocomplete="email">
+        <button class="btn btn--brass" type="submit">Issue my card</button>
+      </form>
+      <p class="form-msg form-msg--light" id="signup-msg" role="status"></p>
+    </div>
+    <div class="libcard" aria-hidden="true">
+      <div class="libcard__top">
+        <span class="libcard__brand">Book Cafe</span>
+        <span class="mono">Borrower's Card</span>
+      </div>
+      <div class="libcard__body">
+        <div class="libcard__line"><span>Name</span><b id="card-name">Your name here</b></div>
+        <div class="libcard__line"><span>Card no.</span><b id="card-no" class="mono">BC-028-0000</b></div>
+        <div class="libcard__line"><span>Card type</span><b>Reader</b></div>
+      </div>
+      <table class="libcard__table">
+        <thead><tr><th>Date due</th><th>Title</th></tr></thead>
+        <tbody>
+          <tr><td id="due-1"></td><td>Piranesi</td></tr>
+          <tr><td id="due-2"></td><td>Braiding Sweetgrass</td></tr>
+          <tr><td id="due-3"></td><td>Devotions</td></tr>
+        </tbody>
+      </table>
+      <span class="libcard__stamp">Issued</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15 DONATE / VISIT ============ -->
+<section class="section contact" id="donate">
+  <div class="wrap contact__grid">
+    <div class="contact__copy">
+      <p class="eyebrow"><span>§ 14</span> Leave a Book, Take a Book</p>
+      <h2>Our shelves are <em>stocked by you.</em></h2>
+      <p>Most of our library was given by readers. Bring books in good condition to the counter any day. For every three you donate, your next drip coffee is free.</p>
+      <ul class="contact__list">
+        <li><span class="mono">We'd love</span><span class="contact__val">Fiction, poetry, travel, kids' books</span></li>
+        <li><span class="mono">We can't take</span><span class="contact__val">Textbooks, encyclopedias, damp books</span></li>
+        <li><span class="mono">Find us</span><span class="contact__val">18 Folio Lane, Old Town</span></li>
+        <li><span class="mono">Call</span><span class="contact__val">(555) 014-2048</span></li>
+      </ul>
+    </div>
+    <figure class="contact__figure">
+      <img src="images/donate-books.jpg" alt="White shelves filled with colourful donated books" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="colophon">
+  <div class="wrap colophon__grid">
+    <div class="colophon__brand">
+      <span class="brand__mark brand__mark--lg" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="36" height="36"><path d="M5 9.5c3.6-1.3 7.3-1 11 1.4 3.7-2.4 7.4-2.7 11-1.4v13c-3.6-1.3-7.3-1-11 1.4-3.7-2.4-7.4-2.7-11-1.4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 10.9v13" stroke="currentColor" stroke-width="1.6"/><path d="M12 4.5c-.8 1 .8 1.6 0 2.6M16 3.8c-.8 1 .8 1.6 0 2.6M20 4.5c-.8 1 .8 1.6 0 2.6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </span>
+      <p class="colophon__motto">Borrow a book. <em>Stay for the coffee.</em></p>
+    </div>
+    <div>
+      <h4>Café</h4>
+      <a href="#shelf">House drinks</a>
+      <a href="#catalogue">Full menu</a>
+      <a href="#rooms">Rooms &amp; hours</a>
+      <a href="#reserve">Reserve a table</a>
+    </div>
+    <div>
+      <h4>Library</h4>
+      <a href="#arrivals">New arrivals</a>
+      <a href="#how-it-works">How borrowing works</a>
+      <a href="#membership">Library cards</a>
+      <a href="#donate">Donate books</a>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <span>18 Folio Lane, Old Town</span>
+      <span>Mon–Thu 7AM–9PM</span>
+      <span>Fri–Sat 7AM–10PM</span>
+      <span>Sun 8AM–6PM</span>
+    </div>
+  </div>
+  <div class="wrap colophon__base">
+    <p><span class="mono">Colophon.</span> Set in Fraunces, Instrument Sans &amp; IBM Plex Mono. Photography from Unsplash.</p>
+    <p>© 2026 Book Cafe</p>
+    <a href="#top" class="mono">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
